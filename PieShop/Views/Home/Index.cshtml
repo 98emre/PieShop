@@ -1,0 +1,22 @@
+﻿@model HomeViewModel;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+
+    <img src="~/images/bethanylogo.png"/>
+    <h1>Pies Of The Week</h1>
+
+    <h5>Enjoy a weekly selection of our favorite pies</h5>
+
+    <div class="row row-cols-md-3 g-4">
+        @foreach (var pie in Model.PiesOfTheWeek)
+        {
+           <partial name="_PieCard" model="pie" />
+        }
+    </div>
+
+
+</div>
